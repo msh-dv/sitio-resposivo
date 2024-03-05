@@ -40,6 +40,10 @@ body {
 
 }
 
+svg {
+  display: none;
+}
+
 #nav-bar {
   width: 100%;
   flex-flow: row wrap;
@@ -178,3 +182,34 @@ body {
   text-align: center;
 }
 
+
+@media screen and (max-width: 700px){
+  #main-header h1{
+    font-size: 1.6rem;
+  }
+
+  svg {
+    display: block;
+    height: 1.5rem;
+    cursor: pointer;
+  }
+
+  svg path {
+    fill:var(--fg-color);
+  }
+  #nav-items{
+    display: none;
+  }
+  .main-container{
+    grid-template-columns: 1fr;
+  }
+  .relation{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  #nav-items a{
+    font-size: 1rem;
+  }
+}
