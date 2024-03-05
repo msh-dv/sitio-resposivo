@@ -36,7 +36,7 @@ body {
   background-color: var(--bg-color);
   color:var(--fg-color);
   
-  border-bottom: 3px solid var(--dark-blue);
+  border-bottom: 3px solid var(--light-blue);
 
 }
 
@@ -180,6 +180,19 @@ svg {
 
 .center-text {
   text-align: center;
+}
+
+footer {
+  font-family: 'Roboto';
+  font-style: italic;
+  text-decoration: underline;
+  height: 5rem;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1rem;
 }
 
 
