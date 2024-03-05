@@ -142,6 +142,11 @@ svg {
   text-decoration: underline;
 }
 
+.main-container *::selection{
+  color:var(--fg-color);
+  background-color: var(--bg-color);
+}
+
 .main-container {
   padding: 1rem 1rem;
   display: grid;
