@@ -159,7 +159,7 @@ svg {
 
 #main-content {
   max-width: 100%;
-  padding-left: 4rem;
+  padding-left: 2rem;
 }
 
 #main-content h1, h2{
@@ -248,24 +248,6 @@ svg {
   text-align: center;
 }
 
-footer {
-  font-family: 'Roboto';
-  font-style: italic;
-  text-decoration: underline;
-  height: 5rem;
-  width: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: flex-end;
-  justify-content: center;
-  padding: 1rem;
-  background-color: var(--dark-blue);
-  color: var(--light-blue);
-}
-footer a{
-  color: var(--light-blue);
-}
-
 
 @media screen and (max-width: 700px){
   #main-content h1{
@@ -351,3 +333,22 @@ footer a{
     font-size: 1rem;
   }
 }
+
+footer {
+  font-family: 'Roboto';
+  font-style: italic;
+  text-decoration: underline;
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark-blue);
+  color: var(--light-blue);
+}
+footer a{
+  color: var(--light-blue);
+}
+
