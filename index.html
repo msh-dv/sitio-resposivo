@@ -1,154 +1,316 @@
 <!DOCTYPE html>
 <html lang="es-MX">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Chanchito Blog</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="resources/favicon.svg" sizes="32x32">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="resources/favicon.svg" sizes="32x32" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
     <header id="main-header">
       <nav id="nav-bar" class="flex">
-	<div class="banner">
-	  <h1 class="no-padding-margin">Blog chanchito</h1>
-	</div>
-	<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none">
-	  <path fill="#000000" fill-rule="evenodd" d="M19 4a1 1 0 01-1 1H2a1 1 0 010-2h16a1 1 0 011 1zm0 6a1 1 0 01-1 1H2a1 1 0 110-2h16a1 1 0 011 1zm-1 7a1 1 0 100-2H2a1 1 0 100 2h16z"/>
-	</svg>
+        <div class="banner">
+          <h1 class="no-padding-margin">Blog chanchito</h1>
+        </div>
+        <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <path
+            fill="#000000"
+            fill-rule="evenodd"
+            d="M19 4a1 1 0 01-1 1H2a1 1 0 010-2h16a1 1 0 011 1zm0 6a1 1 0 01-1 1H2a1 1 0 110-2h16a1 1 0 011 1zm-1 7a1 1 0 100-2H2a1 1 0 100 2h16z"
+          />
+        </svg>
 
-	<ul id="nav-items" class="flex no-list-decoration no-padding-margin">
-	  <li><a href="#1">Inicio</a></li>
-	  <li><a href="#2">Gúias</a></li>
-	  <li><a href="#3">Tutoriales</a></li>
-	  <li><a href="#4">Contacto</a></li>
-	</ul>
+        <ul id="nav-items" class="flex no-list-decoration no-padding-margin">
+          <li><a href="#1">Inicio</a></li>
+          <li><a href="#2">Gúias</a></li>
+          <li><a href="#3">Tutoriales</a></li>
+          <li><a href="#4">Contacto</a></li>
+        </ul>
       </nav>
     </header>
     <div class="main-container">
-
       <main id="main-content">
-	<h1 class=" underline no-padding-margin">Ranger - Administra tus archivos desde la terminal</h1>
+        <h1 class="underline no-padding-margin">
+          Ranger - Administra tus archivos desde la terminal
+        </h1>
 
-	<p><strong>Escrito por: <a href="https://github.com/msh-dv">Tony</a> - 23/11/2023</strong></p>
-	<p>Para la mayoría de usuarios usar los comandos <code>ls</code> y <code>cat</code> para visualizar los archivos y su contenido o <code>cp</code> y <code>mv</code> para copiarlos, moverlos o renombrarlos es más que suficiente, pero hoy vamos a ver una menera diferente y minimalista de hacerlo con ranger.</p>
-	<img src="resources/c78.jpg" alt="ranger">
-	<p>En esta breve guía veremos lo básico como su instalación, interfaz, atajos y configuración.</p>
-	<p>Ranger es un administrador de archivos minimalista basado en texto, escrito en Python y que usa combinaciones de teclas basadas en VI, así que sí estás familiarizado con <a href="http://localhost:9064/vim1.html">Vim</a> seguramente te resultara sencillo acoplarte a su uso. Además de esto cuenta con <code>rifle</code> un poderoso lanzador de archivos, cuyo punto fuerte es que puede determinar automáticamente los tipos de archivos y con eso elegir que programa usar para abrirlos, sin necesidad de nuestra interacción.</p>
-	<h2><strong>Instalación</strong></h2>
-	<p>Aquí podrán encontrar varias formas de instalarlo dependiendo de su distribución:</p>
-	<p><strong>Arch Linux:</strong></p>
-	<pre><code>sudo pacman -Sy ranger
+        <p>
+          <strong
+            >Escrito por: <a href="https://github.com/msh-dv">Tony</a> -
+            23/11/2023</strong
+          >
+        </p>
+        <p>
+          Para la mayoría de usuarios usar los
+          comandos <code>ls</code> y <code>cat</code> para visualizar los
+          archivos y su contenido o <code>cp</code> y <code>mv</code> para
+          copiarlos, moverlos o renombrarlos es más que suficiente, pero hoy
+          vamos a ver una menera diferente y minimalista de hacerlo con ranger.
+        </p>
+        <img src="resources/c78.jpg" alt="ranger" />
+        <p>
+          En esta breve guía veremos lo básico como su instalación, interfaz,
+          atajos y configuración.
+        </p>
+        <p>
+          Ranger es un administrador de archivos minimalista basado en texto,
+          escrito en Python y que usa combinaciones de teclas basadas en VI, así
+          que sí estás familiarizado con <a
+            href="http://localhost:9064/vim1.html"
+            >Vim</a
+          > seguramente te resultara sencillo acoplarte a su uso. Además de esto
+          cuenta con <code>rifle</code> un poderoso lanzador de archivos, cuyo
+          punto fuerte es que puede determinar automáticamente los tipos de
+          archivos y con eso elegir que programa usar para abrirlos, sin
+          necesidad de nuestra interacción.
+        </p>
+        <h2><strong>Instalación</strong></h2>
+        <p>
+          Aquí podrán encontrar varias formas de instalarlo dependiendo de su
+          distribución:
+        </p>
+        <p><strong>Arch Linux:</strong></p>
+        <pre><code>sudo pacman -Sy ranger
 	</code></pre>
-	<p><strong>Debian / Ubuntu:</strong></p>
-	<pre><code>sudo apt install ranger
+        <p><strong>Debian / Ubuntu:</strong></p>
+        <pre><code>sudo apt install ranger
 	</code></pre>
-	<p><strong>Fedora:</strong></p>
-	<pre><code>sudo dnf install ranger
+        <p><strong>Fedora:</strong></p>
+        <pre><code>sudo dnf install ranger
 	</code></pre>
-	<p><strong>Gentoo:</strong></p>
-	<pre><code>sudo emerge -U app-misc/ranger
+        <p><strong>Gentoo:</strong></p>
+        <pre><code>sudo emerge -U app-misc/ranger
 	</code></pre>
-	<p><strong>PyPI:</strong></p>
-	<pre><code>pip install ranger-fm
+        <p><strong>PyPI:</strong></p>
+        <pre><code>pip install ranger-fm
 	</code></pre>
-	<p>Si quieres instalarlo manualmente clonando el repositorio, puedes revisar el proceso <a href="https://github.com/ranger/ranger#installing">aquí</a></p>
-	<h2><strong>Interfaz</strong></h2>
-	<p>La ventana principal muestra de manera predeterminada tres columnas (columnas de Miller):</p>
-	<img src="resources/c83.jpg" alt="ranger">
-	<ul>
-	  <li>La columna de la izquierda muestra el directorio principal, con el directorio actual resaltado.</li>
-	  <li>La columna central muestra el directorio actual.</li>
-	  <li>La columna derecha muestra una previsualización del directorio seleccionado o de los archivos seleccionados.</li>
-	</ul>
-	<p>En la parte superior podremos encontrar la ruta del directorio actual y en la parte inferior podremos ver los atributos del archivo actual.</p>
-	<p>Si ya tienes experiencia con Vim, entonces ya conoces algunas formas de trabajar con ranger, como usar las teclas <code>hjkl</code> para moverte entre directrios y archivos, así también comparte algunos modismos con Vim. Por ejemplo: <code>yy</code> (copiar), <code>pp</code> (pegar), <code>dd</code> (cortar). Puedes usar funciones más complejas desde la línea de comandos usando <code>:</code> como en Vim.</p>
-	<h2><strong>Navegando en ranger</strong></h2>
-	<p>Como mencione anteriormente podemos usar las teclas de movmimiento de Vim o las flechas de movimiento:</p>
-	<pre><code>    k    --- arriba
+        <p>
+          Si quieres instalarlo manualmente clonando el repositorio, puedes
+          revisar el proceso <a
+            href="https://github.com/ranger/ranger#installing"
+            >aquí</a
+          >
+        </p>
+        <h2><strong>Interfaz</strong></h2>
+        <p>
+          La ventana principal muestra de manera predeterminada tres columnas
+          (columnas de Miller):
+        </p>
+        <img src="resources/c83.jpg" alt="ranger" />
+        <ul>
+          <li>
+            La columna de la izquierda muestra el directorio principal, con el
+            directorio actual resaltado.
+          </li>
+          <li>La columna central muestra el directorio actual.</li>
+          <li>
+            La columna derecha muestra una previsualización del directorio
+            seleccionado o de los archivos seleccionados.
+          </li>
+        </ul>
+        <p>
+          En la parte superior podremos encontrar la ruta del directorio actual
+          y en la parte inferior podremos ver los atributos del archivo actual.
+        </p>
+        <p>
+          Si ya tienes experiencia con Vim, entonces ya conoces algunas formas
+          de trabajar con ranger, como usar las teclas <code>hjkl</code> para
+          moverte entre directrios y archivos, así también comparte algunos
+          modismos con Vim. Por
+          ejemplo: <code>yy</code> (copiar), <code>pp</code> (pegar), <code>dd</code> (cortar).
+          Puedes usar funciones más complejas desde la línea de comandos
+          usando <code>:</code> como en Vim.
+        </p>
+        <h2><strong>Navegando en ranger</strong></h2>
+        <p>
+          Como mencione anteriormente podemos usar las teclas de movmimiento de
+          Vim o las flechas de movimiento:
+        </p>
+        <pre><code>    k    --- arriba
   h   l  --- izquierda o regresar / derecha o entrar
     j    --- abajo
 	</code></pre>
-	<p>La tecla <code>l</code> sirve para entrar a directorios, para ejecutar programas, abrir imágenes, etc.</p>
-	<p>Se puede usar <code>i</code> para inspeccionar un archivo, por lo que se pondra en pantalla completa, nos podremos desplazar por el y podemos volver a presionar <code>i</code> para salir de la inspección. Podemos usar también <code>q</code> para salir de la inspección, o para salir de una pestaña activa o para salir del mismo ranger.</p>
-	<h2><strong>Atajos de teclado y sugerencias</strong></h2>
-	<p>Se pueden hacer muchos comandos utilizando sus atajos de teclado, haciendo uso de las sugerencias. Las sugerencias se muestran cada vez que al presionar una tecla hay multiples acciones disponibles como:</p>
-	<ul>
-	  <li><code>g</code> para la navegación y pestañas, <code>r</code> para el comando <code>:open_width</code>, <code>y</code> para copiar y <code>d</code> para cortar/eliminar.</li>
-	  <li><code>p</code> para <code>paste</code> (pegar).</li>
-	  <li><code>o</code> para ordenar.</li>
-	  <li><code>.</code> para filter_stack.</li>
-	  <li><code>z</code> para cmabiar ajustes, <code>u</code> para deshacer.</li>
-	  <li><code>M</code> para linemode.</li>
-	  <li><code>+,-,=</code> para establecer los derechos de acceso a archivos.</li>
-	</ul>
-	<p>Las sugerencias consisten en teclas del lado izquierdo y su comando correspondiente de lado derecho</p>
-	<img src="resources/c84.jpg" alt="ranger">
-	<h3><strong>Pestañas</strong></h3>
-	<p>Si quieres separar algunos directorios a la hora de trabajar, puedes usar la opción de crear una pestaña dedicada al directorio que elijas. Las pestañas están numeradas. Para cambiar de pestaña, puedes presionar <code>Alt-N</code>, donde <code>N</code> es el número de pestaña a la que quieres moverte, si esta pestaña no existe, será creada, también puedes usar <code>Tab</code> o <code>Shift-Tab</code> para moverte entre ellas y las puedes cerrar con <code>q</code>.</p>
-	<h2><strong>Configuración básica</strong></h2>
-	<p>Ranger usa 4 archivos de configuración principales:</p>
-	<ul>
-	  <li><code>rc.conf</code> es utilizado para varias opciones de configuración y atajos de teclado a funciones (más adelante veremos como habilitar la previsualización de imágenes).</li>
-	  <li><code>rifle.conf</code> decide qué programa se utiliza para abrir los archivos.</li>
-	  <li><code>scope.sh</code> es un shell script utilizado para generar previsualizaciones para varios tipos de archivos.</li>
-	  <li><code>commands.py</code> contiene varias implementaciones de funciones, escritas en Python, utilizadas para modificar el comportamiento de <code>ranger</code> e implementar tus propios comandos.</li>
-	</ul>
-	<p>Puedes utilizar:</p>
-	<pre><code>ranger --copy-config=all
+        <p>
+          La tecla <code>l</code> sirve para entrar a directorios, para ejecutar
+          programas, abrir imágenes, etc.
+        </p>
+        <p>
+          Se puede usar <code>i</code> para inspeccionar un archivo, por lo que
+          se pondra en pantalla completa, nos podremos desplazar por el y
+          podemos volver a presionar <code>i</code> para salir de la inspección.
+          Podemos usar también <code>q</code> para salir de la inspección, o
+          para salir de una pestaña activa o para salir del mismo ranger.
+        </p>
+        <h2><strong>Atajos de teclado y sugerencias</strong></h2>
+        <p>
+          Se pueden hacer muchos comandos utilizando sus atajos de teclado,
+          haciendo uso de las sugerencias. Las sugerencias se muestran cada vez
+          que al presionar una tecla hay multiples acciones disponibles como:
+        </p>
+        <ul>
+          <li>
+            <code>g</code> para la navegación y pestañas, <code>r</code> para el
+            comando <code>:open_width</code>, <code>y</code> para copiar
+            y <code>d</code> para cortar/eliminar.
+          </li>
+          <li><code>p</code> para <code>paste</code> (pegar).</li>
+          <li><code>o</code> para ordenar.</li>
+          <li><code>.</code> para filter_stack.</li>
+          <li>
+            <code>z</code> para cmabiar ajustes, <code>u</code> para deshacer.
+          </li>
+          <li><code>M</code> para linemode.</li>
+          <li>
+            <code>+,-,=</code> para establecer los derechos de acceso a
+            archivos.
+          </li>
+        </ul>
+        <p>
+          Las sugerencias consisten en teclas del lado izquierdo y su comando
+          correspondiente de lado derecho
+        </p>
+        <img src="resources/c84.jpg" alt="ranger" />
+        <h3><strong>Pestañas</strong></h3>
+        <p>
+          Si quieres separar algunos directorios a la hora de trabajar, puedes
+          usar la opción de crear una pestaña dedicada al directorio que elijas.
+          Las pestañas están numeradas. Para cambiar de pestaña, puedes
+          presionar <code>Alt-N</code>, donde <code>N</code> es el número de
+          pestaña a la que quieres moverte, si esta pestaña no existe, será
+          creada, también puedes
+          usar <code>Tab</code> o <code>Shift-Tab</code> para moverte entre
+          ellas y las puedes cerrar con <code>q</code>.
+        </p>
+        <h2><strong>Configuración básica</strong></h2>
+        <p>Ranger usa 4 archivos de configuración principales:</p>
+        <ul>
+          <li>
+            <code>rc.conf</code> es utilizado para varias opciones de
+            configuración y atajos de teclado a funciones (más adelante veremos
+            como habilitar la previsualización de imágenes).
+          </li>
+          <li>
+            <code>rifle.conf</code> decide qué programa se utiliza para abrir
+            los archivos.
+          </li>
+          <li>
+            <code>scope.sh</code> es un shell script utilizado para generar
+            previsualizaciones para varios tipos de archivos.
+          </li>
+          <li>
+            <code>commands.py</code> contiene varias implementaciones de
+            funciones, escritas en Python, utilizadas para modificar el
+            comportamiento de <code>ranger</code> e implementar tus propios
+            comandos.
+          </li>
+        </ul>
+        <p>Puedes utilizar:</p>
+        <pre><code>ranger --copy-config=all
 	</code></pre>
-	<p>para copiar todos los archivos de configuración predeterminados a la ruta <code>~/.config/ranger</code>, puedes reemplazar <code>all</code> por <code>rc, rifle, scope y commands</code> cualquiera de los archivos que quieras copiar</p>
-	<p>Al final, deberías tener estos archivos en tu <code>~/.config/ranger</code>:</p>
-	<pre><code>commands.py  rc.conf  rifle.conf  scope.sh
+        <p>
+          para copiar todos los archivos de configuración predeterminados a la
+          ruta <code>~/.config/ranger</code>, puedes
+          reemplazar <code>all</code> por <code
+            >rc, rifle, scope y commands</code
+          > cualquiera de los archivos que quieras copiar
+        </p>
+        <p>
+          Al final, deberías tener estos archivos en
+          tu <code>~/.config/ranger</code>:
+        </p>
+        <pre><code>commands.py  rc.conf  rifle.conf  scope.sh
 	</code></pre>
-	<p>Se recomienda solo añadir tus opciones y atajos al archivo <code>rc.conf</code>, en lugar de hacer una copia completa de la configuración predeterminada.</p>
-	<h2><strong>Previsualizaciones</strong></h2>
-	<p>Las previsualizaciones de nuestros archivos están ofrecidas por <code>scope.sh</code>. Es un shell script normal y su comportamiento está bien documentado en los propios comentarios del archivo.</p>
-	<p>Se puede reemplazar <a href="http://scope.sh/">scope.sh</a> por un script en otros lenguajes o binarios nuestros. Solo debe seguir las convenciones de llamada de <a href="http://scope.sh/">scope.sh</a> y sus códigos de retorno.</p>
-	<h3><strong>Previsualizar imágenes</strong></h3>
-	<p>Como ultima sección, veremos como podemos previsualizar imágenes desde ranger. Sí, se pueden ver imágenes en ranger, aunque solo está disponible para algunas terminales, en el caso de este blog, se usó Kitty.</p>
-	<img src="resources/c101.jpg" alt="ranger-images">
-	<p>Ranger admite previsualizaciones fiables en algunas terminales como <code>urxvt</code>,<code>iTerm2</code>,<code>Kitty</code> o <code>Terminology</code>. Para habilitarlo, dirígete a tu archivo <code>rc.conf</code> y añade las siguientes líneas:</p>
-	<pre><code>set preview_images true
+        <p>
+          Se recomienda solo añadir tus opciones y atajos al
+          archivo <code>rc.conf</code>, en lugar de hacer una copia completa de
+          la configuración predeterminada.
+        </p>
+        <h2><strong>Previsualizaciones</strong></h2>
+        <p>
+          Las previsualizaciones de nuestros archivos están ofrecidas
+          por <code>scope.sh</code>. Es un shell script normal y su
+          comportamiento está bien documentado en los propios comentarios del
+          archivo.
+        </p>
+        <p>
+          Se puede reemplazar <a href="http://scope.sh/">scope.sh</a> por un
+          script en otros lenguajes o binarios nuestros. Solo debe seguir las
+          convenciones de llamada de <a href="http://scope.sh/">scope.sh</a> y
+          sus códigos de retorno.
+        </p>
+        <h3><strong>Previsualizar imágenes</strong></h3>
+        <p>
+          Como ultima sección, veremos como podemos previsualizar imágenes desde
+          ranger. Sí, se pueden ver imágenes en ranger, aunque solo está
+          disponible para algunas terminales, en el caso de este blog, se usó
+          Kitty.
+        </p>
+        <img src="resources/c101.jpg" alt="ranger-images" />
+        <p>
+          Ranger admite previsualizaciones fiables en algunas terminales
+          como <code>urxvt</code>,<code>iTerm2</code>,<code>Kitty</code> o <code>Terminology</code>.
+          Para habilitarlo, dirígete a tu archivo <code>rc.conf</code> y añade
+          las siguientes líneas:
+        </p>
+        <pre><code>set preview_images true
 set preview_images_method kitty
 	</code></pre>
-	<p>Con esto ya podríamos ver nuestras previsualizaciones, si quieres ver como hacerlo en las otras terminales, puedes verlo <a href="https://github.com/ranger/ranger/wiki/Official-User-Guide#image-previews">aquí</a></p>
-	<p><em>Y eso sería todo, con esta guía básica deberías tener las bases para usar ranger, cubriré más temas en futuras entregas, gracias por leer.</em></p>
-
+        <p>
+          Con esto ya podríamos ver nuestras previsualizaciones, si quieres ver
+          como hacerlo en las otras terminales, puedes verlo <a
+            href="https://github.com/ranger/ranger/wiki/Official-User-Guide#image-previews"
+            >aquí</a
+          >
+        </p>
+        <p>
+          <em
+            >Y eso sería todo, con esta guía básica deberías tener las bases
+            para usar ranger, cubriré más temas en futuras entregas, gracias por
+            leer.</em
+          >
+        </p>
       </main>
 
       <aside class="relation">
-	<h2 class="center-text no-padding-margin">Articulos relacionados</h2>
-	<div class="container">
-	  <section class="articles-container">
-	    <article class="article-rel">
-	      <a class="img-link" href="#01"></a>
-	      <h3><a class="title-link" href="#01">Diferencias entre programas</a></h3>
-	    </article>
-	    <article class="article-rel">
-	      <a class="img-link" href="#02"></a>
-	      <h3><a class="title-link" href="#02">Más Información</a></h3>
-	    </article>
-	    <article class="article-rel">
-	      <a class="img-link" href="#03"></a>
-	      <h3><a class="title-link" href="#03">Articulo #2</a></h3>
-	    </article>
-	    <article class="article-rel">
-	      <a class="img-link" href="#04"></a>
-	      <h3><a class="title-link" href="#04">Información sobre el sitio</a></h3>
-	    </article>
-	    <article class="article-rel">
-	      <a class="img-link" href="#05"></a>
-	      <h3><a class="title-link" href="#05">Productos relacionados</a></h3>
-	    </article>
-	  </section>
-	</div>
+        <h2 class="center-text no-padding-margin">Articulos relacionados</h2>
+        <div class="container">
+          <section class="articles-container">
+            <article class="article-rel">
+              <a class="img-link" href="#01"></a>
+              <h3>
+                <a class="title-link" href="#01">Diferencias entre programas</a>
+              </h3>
+            </article>
+            <article class="article-rel">
+              <a class="img-link" href="#02"></a>
+              <h3><a class="title-link" href="#02">Más Información</a></h3>
+            </article>
+            <article class="article-rel">
+              <a class="img-link" href="#03"></a>
+              <h3><a class="title-link" href="#03">Articulo #2</a></h3>
+            </article>
+            <article class="article-rel">
+              <a class="img-link" href="#04"></a>
+              <h3>
+                <a class="title-link" href="#04">Información sobre el sitio</a>
+              </h3>
+            </article>
+            <article class="article-rel">
+              <a class="img-link" href="#05"></a>
+              <h3>
+                <a class="title-link" href="#05">Productos relacionados</a>
+              </h3>
+            </article>
+          </section>
+        </div>
       </aside>
-
-
     </div>
   </body>
   <footer>
-    <p> &copy; <a href="https://msh-blog.com/">msh-blog.com</a> 2024. Todos los derechos reservados.</p>
+    <p>
+      &copy; <a href="https://msh-blog.com/">msh-blog.com</a> 2024. Todos los
+      derechos reservados.
+    </p>
   </footer>
 </html>
